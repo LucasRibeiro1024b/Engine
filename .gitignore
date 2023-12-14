@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+/.vs/Engine
+/x64/Debug
