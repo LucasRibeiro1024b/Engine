@@ -2,6 +2,8 @@
 // Filename: d3dclass.cpp
 ////////////////////////////////////////////////////////////////////////////////
 #include "d3dclass.h"
+#include <fstream>
+#include <iostream>
 
 D3DClass::D3DClass()
 {
@@ -342,6 +344,20 @@ bool D3DClass::Initialize(int screenWidth, int screenHeight, bool vsync, HWND hw
 
 	// Create an orthographic projection matrix for 2D rendering.
 	m_orthoMatrix = XMMatrixOrthographicLH((float)screenWidth, (float)screenHeight, screenNear, screenDepth);
+
+
+	//Printing gpu info in a file
+	//std::ofstream outputFile("output.txt"); // create a new output file or overwrite an existing one
+
+	//if (outputFile.is_open()) { // check if the file was opened successfully
+	//	outputFile << m_videoCardDescription;
+	//	outputFile << m_videoCardMemory;
+	//	outputFile.close(); // close the file when done
+	//	std::cout << "Data was written to output.txt\n";
+	//}
+	//else {
+	//	std::cerr << "Error opening file\n";
+	//}
 
 
 	return true;
